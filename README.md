@@ -14,8 +14,8 @@ This project is a RESTful API built with FastAPI for managing persons and their 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/pointpaul/web-atrio-API
+   cd web-atrio-API
    ```
 
 2. Create a virtual environment and activate it:
@@ -31,7 +31,7 @@ This project is a RESTful API built with FastAPI for managing persons and their 
 
 4. Run the application:
    ```bash
-   uvicorn my_fastapi_app.main:app --reload
+   uvicorn api.main:app --reload
    ```
 
 ## Usage
@@ -49,12 +49,12 @@ This project is a RESTful API built with FastAPI for managing persons and their 
 
 ## Database
 
-The application uses SQLite for data storage. The database is configured in `my_fastapi_app/database.py`.
+The application uses SQLite for data storage. The database is configured in `api/database.py`.
 
 ## Code Structure
 
-- `my_fastapi_app/main.py`: Contains the FastAPI application and endpoint definitions.
-- `my_fastapi_app/models.py`: Defines the SQLAlchemy models for Person and Job.
-- `my_fastapi_app/schemas.py`: Contains Pydantic models for request and response validation.
-- `my_fastapi_app/crud.py`: Implements the CRUD operations for interacting with the database.
-- `my_fastapi_app/database.py`: Configures the database connection and session.
+- `api/main.py`: Contains the FastAPI application and endpoint definitions.
+- `api/models.py`: Defines the SQLAlchemy models for Person and Job.
+- `api/schemas.py`: Contains Pydantic models for request and response validation.
+- `api/crud.py`: Implements the CRUD operations for interacting with the database.
+- `api/database.py`: Configures the database connection and session.
