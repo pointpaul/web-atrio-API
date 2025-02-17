@@ -1,0 +1,103 @@
+{
+  "info": {
+    "name": "FastAPI Test Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Person",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"first_name\": \"Paul\",\n    \"last_name\": \"Maylié\",\n    \"birth_date\": \"1996-03-05\"\n}"
+        },
+        "url": {
+          "raw": "http://163.172.4.194:8080/persons/",
+          "protocol": "http",
+          "host": ["163.172.4.194"],
+          "port": "8080",
+          "path": ["persons", ""]
+        }
+      }
+    },
+    {
+      "name": "Add Job to Person",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"company_name\": \"web-atrio\",\n    \"position\": \"Developer\",\n    \"start_date\": \"2020-01-01\"\n}"
+        },
+        "url": {
+          "raw": "http://163.172.4.194:8080/persons/1/jobs/",
+          "protocol": "http",
+          "host": ["163.172.4.194"],
+          "port": "8080",
+          "path": ["persons", "1", "jobs", ""]
+        }
+      }
+    },
+    {
+      "name": "Get All Persons",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://163.172.4.194:8080/persons/",
+          "protocol": "http",
+          "host": ["163.172.4.194"],
+          "port": "8080",
+          "path": ["persons", ""]
+        }
+      }
+    },
+    {
+      "name": "Get Persons by Company",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://163.172.4.194:8080/companies/web-atrio/persons/",
+          "protocol": "http",
+          "host": ["163.172.4.194"],
+          "port": "8080",
+          "path": ["companies", "web-atrio", "persons", ""]
+        }
+      }
+    },
+    {
+      "name": "Get Jobs for Person Between Dates",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://163.172.4.194:8080/persons/1/jobs/?start_date=2020-01-01&end_date=2021-01-01",
+          "protocol": "http",
+          "host": ["163.172.4.194"],
+          "port": "8080",
+          "path": ["persons", "1", "jobs", ""],
+          "query": [
+            {
+              "key": "start_date",
+              "value": "2020-01-01"
+            },
+            {
+              "key": "end_date",
+              "value": "2021-01-01"
+            }
+          ]
+        }
+      }
+    }
+  ]
+} 
